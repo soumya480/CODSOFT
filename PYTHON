@@ -1,0 +1,22 @@
+print("<---Calculator--->\n")
+
+print("1.Addition(+)\n")
+print("2.Subtraction(-)\n")
+print("3.Multiplication(*)\n")
+print("4.Division(/)\n")
+
+Number1=int(input("Enter first number:"))
+Number2=int(input("Enter second number:"))
+
+option=int(input("\nChoose option:"))
+
+if option==1:
+    print("\nAnswer:",Number1+Number2)
+elif option==2:
+    print("\nAnswer:",Number1-Number2)
+elif option==3:
+    print("\nAnswer:",Number1*Number2)
+elif option==4:
+    print("\nAnswer:",Number1//Number2)
+else:
+    print("\nInvalid!Choose correct option.\n")
