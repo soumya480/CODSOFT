@@ -1,0 +1,58 @@
+import random  
+
+user_score = 0
+computer_score = 0
+
+print("<---------- Welcome to Rock-Paper-Scissors Game---------->")
+
+while True:
+    
+    print("\nChoose one: rock, paper or scissors")
+    user_choice = input("Your choice: ").lower()
+
+    
+    if user_choice not in ['rock', 'paper', 'scissors']:
+        print("Invalid choice. Try again.")
+        continue
+
+    
+    computer_choice = random.choice(['rock', 'paper', 'scissors'])
+
+    
+    print("\nYou chose:", user_choice)
+    print("Computer chose:", computer_choice)
+
+    
+    if user_choice == computer_choice:
+        print("\nIt's a tie!")
+    elif user_choice == 'rock':
+        if computer_choice == 'scissors':
+            print("You win!")
+            user_score += 1
+        else:
+            print("\nComputer wins!")
+            computer_score += 1
+    elif user_choice == 'paper':
+        if computer_choice == 'rock':
+            print("\nYou win!")
+            user_score += 1
+        else:
+            print("\nComputer wins!")
+            computer_score += 1
+    elif user_choice == 'scissors':
+        if computer_choice == 'paper':
+            print("\nYou win!")
+            user_score += 1
+        else:
+            print("\nComputer wins!")
+            computer_score += 1
+
+    
+    print("Score -> You:", user_score, "Computer:", computer_score)
+
+    
+    again = input("\nDo you want to play again?: ").lower()
+    if again != 'yes':
+        print("\nThanks for playing!")
+        print("Final Score - You:", user_score, "| Computer:", computer_score)
+        break
